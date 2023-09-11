@@ -40,7 +40,7 @@ In the past, I have been affiliated with the IBM Research India and Indian Insti
 
 ## Publications
 ### Conference
-1. TrendMachine: A Temporal Webpage Resilience Portal by Sawood Alam, Kritika Garg, Michele Weigle, Michael Nelson, Mark Graham and Dietrich Ayala. The ACM/IEEE-CS Joint Conference on Digital Libraries (JCDL 2023)
+1. Sawood Alam, Kritika Garg, Michele Weigle, Michael Nelson, Mark Graham and Dietrich Ayala, "TrendMachine: A Temporal Webpage Resilience Portal," The ACM/IEEE-CS Joint Conference on Digital Libraries (JCDL 2023)
 1. Kritika Garg, Himarsha Jayanetti, Sawood Alam, Michele C. Weigle, and Michael L. Nelson, "Caching HTTP 404 Responses Eliminates Unnecessary Archival Replay Requests," In Proceedings of the International Conference on Asia-Pacific Digital Libraries (ICADL). December 2022. [![LINK](assets/img/biblogo.png)](https://arxiv.org/pdf/2212.00760)
 1. Himarsha Jayanetti, Kritika Garg, Sawood Alam, Michael L. Nelson, and Michele C. Weigle, "Robots Still Outnumber Humans in Web Archives, But Less Than Before," In Proceedings of the Theory and Practice of Digital Libraries Conference (TPDL). September 2022. Best Student Paper Award. [![LINK](assets/img/biblogo.png)](https://arxiv.org/abs/2208.12914)
 1. Kritika Garg,  Himarsha R. Jayanetti, Sawood Alam, Michele C. Weigle, Michael L. Nelson, Replaying Archived Twitter: When your bird is broken, will it bring you down?, The ACM/IEEE-CS Joint Conference on Digital Libraries (JCDL 2021), September 2021. [![LINK](assets/img/biblogo.png)](https://ieeexplore.ieee.org/iel7/9651730/9651733/09651790.pdf)
