@@ -14,17 +14,17 @@ In the past, I have been affiliated with the IBM Research India and Indian Insti
 <!---#### Technical Skills: Python, BashScripting, SQL, AWS, Snowflake, MATLAB-->
 
 ## Education
-- Ph.D. in Computer Science| Old Dominion University at Virginia (_August 2019_)								       		
+- Ph.D. in Computer Science| Old Dominion University (_August 2019_)								       		
 - B.Tech. in Information Technology| Netaji Subhas University of Technology (_July 2015_)
 
 ## Work Experience
 
-**Graduate Teaching Assistant @ Old Dominion University (_August 2019 - Present)**
+**Graduate Teaching Assistant @ Old Dominion University (_August 2019 - Present_)**
 - Teaching Assistant for CS625, Data Visualization for Dr. Faryaneh Poursardar.
 - Instructor for CS121, Introduction to Information Literacy and Research for Scientists.
 - Teaching Assistant for CS361, Data Structures and Algorithms for Dr. Jay Morris.
   
-**Graduate Research Assistant @ Old Dominion University (_August 2019 - Present)**, ***MENTOR: Dr. Michael Nelson, Dr. Michele Weigle***
+**Graduate Research Assistant @ Old Dominion University (_August 2019 - Present_)**, ***MENTOR: Dr. Michael Nelson, Dr. Michele Weigle***
 - Working as a Graduate Research Assistant at ODU CS, under the supervision of Dr.Michael Nelson, in Web Archiving Social Media Analysis.
 
 **Software Developer @ Internet Archive (_May 2021 - August 2021_)**, ***Mentor: Mark Graham***
