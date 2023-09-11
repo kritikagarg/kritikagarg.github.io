@@ -9,7 +9,10 @@ In the past, I have been affiliated with the IBM Research India and Indian Insti
 #### [SEE RESUME](https://docs.google.com/document/d/10vSfbUE14O8EiVjF1gWzN-2xjQ1NMwbQWiVm2UKxOeo/edit?usp=sharing)
 #### Contact: [LinkdIn](https://www.linkedin.com/in/kritika-g-b8a824120/), [Google Scholar](https://scholar.google.com/citations?user=apXQRYsAAAAJ&hl=en&oi=ao), [Github](https://github.com/kritikagarg), [Twitter](https://twitter.com/kritika_garg)
 #### Email: kgarg001@odu.edu
+
 <!---#### Contact: [![LinkdIn](assets/Linkdin.jpg)](https://www.linkedin.com/in/kritika-g-b8a824120/) [![Google Scholar](assets/scholar.png)](https://scholar.google.com/citations?user=apXQRYsAAAAJ&hl=en&oi=ao) [![Github](assets/github.png)](https://github.com/kritikagarg) [![Twitter](assets/twitter.png)](https://twitter.com/kritika_garg) -->
+
+#### Blog: [WS-DL Blog](https://ws-dl.blogspot.com/search/label/GargKritika)
 
 <!---#### Technical Skills: Python, BashScripting, SQL, AWS, Snowflake, MATLAB-->
 
@@ -52,6 +55,9 @@ In the past, I have been affiliated with the IBM Research India and Indian Insti
 ### Journal
 1. Kritika Garg,  Himarsha R. Jayanetti, Sawood Alam, Michele C. Weigle, Michael L. Nelson, Challenges in replaying archived Twitter pages, International Journal on Digital Libraries (IJDL 2023), August 2023. [![LINK](assets/img/biblogo.png)](https://doi.org/10.1007/s00799-023-00379-w)
 1. Kuntal Dey, Saroj Kaushik, Kritika Garg, Assessing the role of participants in the evolution of topic life cycles on social networks, Computational Social Networks 2018, Springer Publication, Open Access Journal, August 2018. [![LINK](assets/img/biblogo.png)](https://doi.org/10.1186/s40649-018-0054-x)
+
+
+
 
 <!---
 ## Projects
