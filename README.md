@@ -14,8 +14,8 @@ In the past, I have been affiliated with the IBM Research India and Indian Insti
 <!---#### Technical Skills: Python, BashScripting, SQL, AWS, Snowflake, MATLAB-->
 
 ## Education
-- Ph.D. in Computer Science| Old Dominion University (_August 2019_)								       		
-- B.Tech. in Information Technology| Netaji Subhas University of Technology (_July 2015_)
+- Ph.D. in Computer Science| Old Dominion University at Virginia, U.S.A (_August 2019_)								       		
+- B.Tech. in Information Technology| Netaji Subhas University of Technology at Delhi, India (_July 2015_)
 
 ## Work Experience
 
