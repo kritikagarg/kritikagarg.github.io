@@ -29,16 +29,31 @@ In the past, I have been affiliated with the IBM Research India and Indian Insti
   
 **Graduate Research Assistant @ Old Dominion University (_August 2019 - Present_)**, ***MENTOR: Dr. Michael Nelson, Dr. Michele Weigle***
 - Working as a Graduate Research Assistant at ODU CS, under the supervision of Dr.Michael Nelson, in Web Archiving Social Media Analysis.
+- Time-Series analysis: Employed Markov chains for analysis of life-cycle of webpages through various HTTP status
+code transitions. Applied Shannon entropy & Compression algorithms to analyze the complexity of page lifecycle
+- Survival analysis: Performed probabilistic modeling to estimate the survival probability of web pages over time,
+utilized Kaplan-Meier method reporting a half-life of 2.1 years
 
 **Software Developer @ Internet Archive (_May 2021 - August 2021_)**, ***Mentor: Mark Graham***
 - Worked for the Wayback Machine team at Internet Archive. The internship aimed to help improve the replay of Wayback Machine.
-- Analyzed the archival replay quality of websites like Instagram, Facebook, etc.
-- Studied the impact of paywalls on archived news sites.
-- Built a Zotero library for web archiving research papers.
+- Bash-Scripting for Data Scraping & Analysis: Build bash scripts for curating a paywall dataset, exploring the
+affecting factors, such as the variability of web crawling tools concerning JavaScript and/or Cookies settings.
+- Data Visualization: Build a script on javascript on d3.js to visualize the citation network database curated using
+bash-scripting
 
-**Research Intern @ Indian Institute of Technology, Delhi (_May 2017 - August 2019_)**, ***Mentor: Dr. Kuntal Dey, Dr. Saroj Kaushik***
+**Research Intern @ IBM, India (May 2018 - July 2018)**, ***Mentor: Dr. Kuntal Dey**
+- NLP (Natural Language Processing) Performed Network Analysis over the topics in the network, focusing on
+information diffusion, homophily, and data lifecycles. Published work in ECIR 2018.
+- Clustering Embedding: Developed a novel method for topic lifecycle analysis on Twitter, integrating GloVe embed-
+dings, K-means clustering, and PageRank via NetworkX, to map topic evolution and user influence.
+- Supervised Machine learning: Developed “SocioTempr,” a Hashtag Prediction model for Twitter. Ingrain the social
+and temporal aspects with a supervised model based on word and sentence embeddings.
+
+**Research Intern @ Indian Institute of Technology, India (_May 2017 - August 2017)**, ***Mentor: Dr. Kuntal Dey, Dr. Saroj Kaushik***
 - Worked as a Research Intern at the Department of Computer Science and Engineering at IIT Delhi under the supervision of Prof. (Dr.) Saroj Kaushik and Dr. Kuntal Dey of IBM Research India.
 - The core area of research is Natural Language Processing in the context of Social Networks.
+
+
 
 
 ## Publications
