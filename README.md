@@ -6,7 +6,7 @@ Hi! I am Kritika Garg. I am a Computer Science Ph.D. Student at Old Dominion Uni
 In the past, I have been affiliated with the IBM Research India and Indian Institute of Technology Delhi.
 
 
-#### [SEE RESUME](https://docs.google.com/document/d/10vSfbUE14O8EiVjF1gWzN-2xjQ1NMwbQWiVm2UKxOeo/edit?usp=sharing)
+<!---#### [SEE RESUME](https://docs.google.com/document/d/10vSfbUE14O8EiVjF1gWzN-2xjQ1NMwbQWiVm2UKxOeo/edit?usp=sharing)-->
 #### Contact: [LinkdIn](https://www.linkedin.com/in/kritika-g-b8a824120/), [Google Scholar](https://scholar.google.com/citations?user=apXQRYsAAAAJ&hl=en&oi=ao), [Github](https://github.com/kritikagarg), [Twitter](https://twitter.com/kritika_garg)
 #### Email: kgarg001@odu.edu
 
