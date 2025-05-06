@@ -58,6 +58,7 @@ and temporal aspects with a supervised model based on word and sentence embeddin
 
 ## Publications
 ### Conference
+1. Kritika Garg, Sawood Alam, Dietrich Ayala, Michele Weigle, and Michael Nelson, "Not Here, Go There: Analyzing Redirection Patterns on the Web," In Proceedings of the 17th ACM Web Science Conference (WebSci) 2025: Reflecting on the Web, AI, and Society (May 2025). [![LINK](assets/img/biblogo.png)](/papers/Websci25_redirection.pdf)
 1. Sawood Alam, Kritika Garg, Michele Weigle, Michael Nelson, Mark Graham and Dietrich Ayala, "TrendMachine: A Temporal Webpage Resilience Portal," The ACM/IEEE-CS Joint Conference on Digital Libraries (JCDL 2023)
 1. Kritika Garg, Himarsha Jayanetti, Sawood Alam, Michele C. Weigle, and Michael L. Nelson, "Caching HTTP 404 Responses Eliminates Unnecessary Archival Replay Requests," In Proceedings of the International Conference on Asia-Pacific Digital Libraries (ICADL). December 2022. [![LINK](assets/img/biblogo.png)](https://arxiv.org/pdf/2212.00760)
 1. Himarsha Jayanetti, Kritika Garg, Sawood Alam, Michael L. Nelson, and Michele C. Weigle, "Robots Still Outnumber Humans in Web Archives, But Less Than Before," In Proceedings of the Theory and Practice of Digital Libraries Conference (TPDL). September 2022. Best Student Paper Award. [![LINK](assets/img/biblogo.png)](https://arxiv.org/abs/2208.12914)
