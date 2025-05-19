@@ -5,7 +5,9 @@ title: Redirection Analysis
 
 # Not Here, Go There: Analyzing Redirection Patterns on the Web
 
-**Description:** A brief summary of your project and its goals.
+**Description:** 
+This project analyzes 11 million redirecting URIs to uncover common redirection patterns and their impact on usability, SEO, and digital preservation. We followed redirects up to 10 hops, revealing that half of the URIs failed to resolve correctly. Canonical redirects (e.g., HTTP to HTTPS) were widespread, while non-canonical redirects often indicated web migrations or security risks. We identified “sink” URIs—targets of mass redirection—and over 62,000 custom 404 pages, nearly half of which were soft errors. Our findings highlight the scale and complexity of redirection on the web and provide insights for improving web integrity and archiving.
+
 
 ## 🔗 Links
 
