@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects · Kritika Garg</title>
+<meta name="description" content="Engineering case studies: MoE inference, LLM serving on EKS, LoRA and RAG, agents, news tracking, information retrieval.">
+<meta name="author" content="Kritika Garg">
+<script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav" aria-label="Site">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Kritika Garg, home"><span>K</span>G</a>
+    <div class="nav-right">
+      <ul><li><a href="index.html">About</a></li><li><a href="experience.html">Experience</a></li><li><a href="research.html">Research</a></li><li><a href="projects.html" aria-current="page">Projects</a></li><li><a href="publications.html">Publications</a></li><li><a href="teaching.html">Teaching</a></li></ul>
+    </div>
+    <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+  </div>
+</nav>
+<main id="top">
+
+<header class="page-head"><div class="wrap">
+  <p class="eyebrow">// work</p>
+  <h1>Projects</h1>
+  <ul class="jump">
+    <li><a href="#colibri">colibri</a></li>
+    <li><a href="#eks">LLM serving on EKS</a></li>
+    <li><a href="#storygraphbot">StoryGraphBot</a></li>
+    <li><a href="#more">More projects</a></li>
+  </ul>
+</div></header>
+
+<div class="wrap">
+
+<article class="case" id="colibri">
+  <div class="case-head">
+    <div class="tags"><span class="label own">Original contribution · merged</span><span>2026 · C</span></div>
+    <h2>colibri: keeping a Mixture-of-Experts engine from stalling</h2>
+    <p class="result-line">Merged upstream. Skips about 22% of late expert loads for a 2.9% perplexity cost, so generation never stalls.</p>
+    <div class="case-links"><a class="btn gh" href="https://github.com/JustVugg/colibri/pull/906"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>View merged pull request</a></div>
+  </div>
+  <figure class="case-media"><div class="diagram"><svg viewBox="0 0 820 104" role="img" aria-label="Decode step with DEGRADE_ZERO: router selects experts, experts prefetched from disk, on a late load the gate weight is compared with tau, low-weight experts are skipped, drops reported per layer."><defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="ah"/></marker></defs><rect class="box" x="1.0" y="8" width="141.2" height="88" rx="10"/><text class="bt" x="71.6" y="42" text-anchor="middle">Route token</text><text class="bs" x="71.6" y="62" text-anchor="middle">router picks</text><text class="bs" x="71.6" y="77" text-anchor="middle">experts</text><line class="arrow" x1="145.2" y1="52.0" x2="165.2" y2="52.0" marker-end="url(#ah)"/><rect class="box" x="170.2" y="8" width="141.2" height="88" rx="10"/><text class="bt" x="240.8" y="42" text-anchor="middle">Prefetch</text><text class="bs" x="240.8" y="62" text-anchor="middle">stream weights</text><text class="bs" x="240.8" y="77" text-anchor="middle">from disk</text><line class="arrow" x1="314.4" y1="52.0" x2="334.4" y2="52.0" marker-end="url(#ah)"/><rect class="box" x="339.4" y="8" width="141.2" height="88" rx="10"/><text class="bt" x="410.0" y="42" text-anchor="middle">Load is late?</text><text class="bs" x="410.0" y="62" text-anchor="middle">compare gate</text><text class="bs" x="410.0" y="77" text-anchor="middle">weight with τ</text><line class="arrow" x1="483.6" y1="52.0" x2="503.6" y2="52.0" marker-end="url(#ah)"/><rect class="box" x="508.6" y="8" width="141.2" height="88" rx="10"/><text class="bt" x="579.2" y="42" text-anchor="middle">Skip or load</text><text class="bs" x="579.2" y="62" text-anchor="middle">skip if below τ,</text><text class="bs" x="579.2" y="77" text-anchor="middle">else wait</text><line class="arrow" x1="652.8" y1="52.0" x2="672.8" y2="52.0" marker-end="url(#ah)"/><rect class="box last" x="677.8" y="8" width="141.2" height="88" rx="10"/><text class="bt" x="748.4" y="42" text-anchor="middle">Report</text><text class="bs" x="748.4" y="62" text-anchor="middle">drops per layer</text></svg></div><figcaption>How <code>DEGRADE_ZERO</code> keeps decoding moving when an expert loads late.</figcaption></figure>
+  <dl class="case-grid">
+    <dt>Problem</dt>
+    <dd>colibri runs large Mixture-of-Experts models on consumer hardware by streaming expert weights from disk. When an expert loads late, decoding stalls.</dd>
+    <dt>Contribution</dt>
+    <dd>An opt-in policy, <code>DEGRADE_ZERO</code>, that skips low-weight experts on a load miss so generation continues. It is decode-only to protect the KV cache, off by default, token-exact when disabled, and reports per-layer telemetry. The default setting zeroes about 22% of expert slots for a 2.9% perplexity cost.</dd>
+    <dt>Quality</dt>
+    <dd>Refined through two review rounds and merged with a 20-check test suite and tuning documentation.</dd>
+  </dl>
+</article>
+
+<article class="case" id="eks">
+  <div class="case-head">
+    <div class="tags"><span>2026 · Kubernetes, vLLM, LMCache, Ray</span></div>
+    <h2>Serving and accelerating an 8B LLM on Amazon EKS</h2>
+    <p class="result-line">21× faster time to first token with KV-cache offloading, and a measured saturation point of about 9 requests per second per GPU.</p>
+  </div>
+  <dl class="case-grid">
+    <dt>Setup</dt>
+    <dd>Ministral-3-8B served with vLLM on one NVIDIA L40S GPU, monitored with Prometheus, Grafana and DCGM, and scaled out with Ray Serve. A tool-calling agent built with the Strands Agents SDK runs on the same model.</dd>
+    <dt>Findings</dt>
+    <dd><ul>
+      <li>Offloading the KV cache with LMCache cut time to first token 21-fold for prompts sharing a long prefix.</li>
+      <li>One GPU saturates near 9 requests per second; beyond that, median latency rises from 196 ms to 23 s.</li>
+    </ul></dd>
+  </dl>
+  <div class="charts">
+    <figure class="chart"><h3>Throughput levels off near 9 req/s</h3><svg viewBox="0 0 400 230" role="img" aria-label="Offered versus achieved requests per second at 5, 10 and 20 requests per second offered: achieved 4.32, 8.21 and 9.20."><line class="grid" x1="44" x2="390" y1="190.0" y2="190.0"/><text x="38" y="194.0" text-anchor="end">0</text><line class="grid" x1="44" x2="390" y1="146.5" y2="146.5"/><text x="38" y="150.5" text-anchor="end">5</text><line class="grid" x1="44" x2="390" y1="103.0" y2="103.0"/><text x="38" y="107.0" text-anchor="end">10</text><line class="grid" x1="44" x2="390" y1="59.5" y2="59.5"/><text x="38" y="63.5" text-anchor="end">15</text><line class="grid" x1="44" x2="390" y1="16.0" y2="16.0"/><text x="38" y="20.0" text-anchor="end">20</text><rect class="bar-a" x="71.7" y="146.5" width="28" height="43.5" rx="2"/><text class="val" x="85.7" y="141.5" text-anchor="middle">5</text><rect class="bar-b" x="103.7" y="152.4" width="28" height="37.6" rx="2"/><text class="val" x="117.7" y="147.4" text-anchor="middle">4.32</text><text x="101.7" y="206" text-anchor="middle">5 req/s offered</text><rect class="bar-a" x="187.0" y="103.0" width="28" height="87.0" rx="2"/><text class="val" x="201.0" y="98.0" text-anchor="middle">10</text><rect class="bar-b" x="219.0" y="118.6" width="28" height="71.4" rx="2"/><text class="val" x="233.0" y="113.6" text-anchor="middle">8.21</text><text x="217.0" y="206" text-anchor="middle">10 req/s offered</text><rect class="bar-a" x="302.3" y="16.0" width="28" height="174.0" rx="2"/><text class="val" x="316.3" y="11.0" text-anchor="middle">20</text><rect class="bar-b" x="334.3" y="110.0" width="28" height="80.0" rx="2"/><text class="val" x="348.3" y="105.0" text-anchor="middle">9.2</text><text x="332.3" y="206" text-anchor="middle">20 req/s offered</text><rect class="bar-a" x="44" y="216" width="10" height="10"/><text x="58" y="225">offered</text><rect class="bar-b" x="116" y="216" width="10" height="10"/><text x="130" y="225">achieved (req/s)</text></svg><figcaption>Saturation test with Poisson arrivals.</figcaption></figure>
+    <figure class="chart"><h3>Latency rises sharply past it</h3><svg viewBox="0 0 400 230" role="img" aria-label="Median time to first token on a log scale: 82 milliseconds at 5 requests per second, 196 milliseconds at 10, and 23.3 seconds at 20."><line class="grid" x1="50" x2="380" y1="172.5" y2="172.5"/><text x="44" y="176.5" text-anchor="end">100 ms</text><line class="grid" x1="50" x2="380" y1="114.5" y2="114.5"/><text x="44" y="118.5" text-anchor="end">1 s</text><line class="grid" x1="50" x2="380" y1="56.5" y2="56.5"/><text x="44" y="60.5" text-anchor="end">10 s</text><path class="line" d="M90.0,177.5 L215.0,155.6 L340.0,35.2"/><circle class="dot" cx="90.0" cy="177.5" r="4.5"/><text class="val" x="90.0" y="165.5" text-anchor="middle">82 ms</text><text x="90.0" y="206" text-anchor="middle">5 req/s</text><circle class="dot" cx="215.0" cy="155.6" r="4.5"/><text class="val" x="215.0" y="175.6" text-anchor="middle">196 ms</text><text x="215.0" y="206" text-anchor="middle">10 req/s</text><circle class="dot" cx="340.0" cy="35.2" r="4.5"/><text class="val" x="328.0" y="39.2" text-anchor="end">23.3 s</text><text x="340.0" y="206" text-anchor="middle">20 req/s</text><text x="50" y="225">Median TTFT, log scale</text></svg><figcaption>Median time to first token.</figcaption></figure>
+    <figure class="chart" style="grid-column:1/-1;max-width:480px"><h3>Cached prefixes skip most of the work</h3><svg viewBox="0 0 400 230" role="img" aria-label="Time to first token for a 4,000-token prompt. CPU cache: 2.79 seconds cold, 0.13 seconds warm. CPU plus Valkey cache: 2.90 seconds cold, 0.21 seconds warm."><line class="grid" x1="40" x2="390" y1="190.0" y2="190.0"/><text x="34" y="194.0" text-anchor="end">0 s</text><line class="grid" x1="40" x2="390" y1="132.0" y2="132.0"/><text x="34" y="136.0" text-anchor="end">1 s</text><line class="grid" x1="40" x2="390" y1="74.0" y2="74.0"/><text x="34" y="78.0" text-anchor="end">2 s</text><line class="grid" x1="40" x2="390" y1="16.0" y2="16.0"/><text x="34" y="20.0" text-anchor="end">3 s</text><rect class="bar-a" x="83.5" y="28.2" width="38" height="161.8" rx="2"/><text class="val" x="102.5" y="23.2" text-anchor="middle">2.79 s</text><rect class="bar-b" x="133.5" y="182.4" width="38" height="7.6" rx="2"/><text class="val" x="152.5" y="177.4" text-anchor="middle">0.13 s</text><text x="127.5" y="206" text-anchor="middle">CPU RAM cache (L1)</text><text class="val" x="135.5" y="146.5" text-anchor="start" style="fill:var(--accent);font-size:12px">21× faster</text><rect class="bar-a" x="258.5" y="21.7" width="38" height="168.3" rx="2"/><text class="val" x="277.5" y="16.7" text-anchor="middle">2.90 s</text><rect class="bar-b" x="308.5" y="177.6" width="38" height="12.4" rx="2"/><text class="val" x="327.5" y="172.6" text-anchor="middle">0.21 s</text><text x="302.5" y="206" text-anchor="middle">CPU + Valkey (L1 + L2)</text><text class="val" x="310.5" y="146.5" text-anchor="start" style="fill:var(--accent);font-size:12px">13.6× faster</text><rect class="bar-a" x="40" y="216" width="10" height="10"/><text x="54" y="225">cold (empty cache)</text><rect class="bar-b" x="160" y="216" width="10" height="10"/><text x="174" y="225">warm (90% prefix cached)</text></svg><figcaption>A 4,092-token prompt followed by one sharing 90% of it.</figcaption></figure>
+  </div>
+  <div class="shots" style="grid-template-columns:repeat(2,1fr);max-width:600px">
+    <figure><a href="img/eks/grafana-vllm.png"><img src="img/eks/grafana-vllm.png" loading="lazy" alt="Grafana dashboard of vLLM metrics."></a><figcaption>vLLM metrics in Grafana</figcaption></figure>
+    <figure><a href="img/eks/grafana-dcgm.png"><img src="img/eks/grafana-dcgm.png" loading="lazy" alt="Grafana NVIDIA DCGM dashboard showing GPU temperature and power."></a><figcaption>GPU telemetry from DCGM</figcaption></figure>
+  </div>
+</article>
+
+<article class="case" id="storygraphbot">
+  <div class="case-head">
+    <div class="tags"><span class="label own">Algorithm and core code</span><span>2021 · Python · with Alexander C. Nwala</span></div>
+    <h2>StoryGraphBot: tracking news stories as they rise and fade</h2>
+    <p class="result-line">A public bot that tracked breaking news across 17 outlets in real time, one thread per story.</p>
+    <div class="case-links"><a class="btn gh" href="https://github.com/oduwsdl/storygraphbot"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>View code on GitHub</a><a class="btn" href="https://ws-dl.blogspot.com/2021/05/2021-05-10-chronicling-life-cycle-of.html">Read the blog post</a></div>
+  </div>
+  <figure class="case-media"><div class="photo pad"><a href="img/projects/storygraphbot-attention.png"><img src="img/projects/storygraphbot-attention.png" width="640" height="320" loading="lazy" alt="Line chart of story attention over May 18 to 19, 2018: the Santa Fe High School shooting story falls from an average degree of 10 to below the 4.0 activation line, while the Royal Wedding story rises to about 11 and then fades."></a></div><figcaption>Two stories tracked by the bot: attention for the Santa Fe shooting fades as the Royal Wedding takes over. The dashed line is the 4.0 activation threshold.</figcaption></figure>
+  <dl class="case-grid">
+    <dt>Contribution</dt>
+    <dd>I designed the tracking algorithm and wrote its core implementation for a public bot that follows breaking news across 17 outlets. A story’s attention is measured from its news graph, and stories are linked across snapshots and days so each thread follows one story from first report to fade-out.</dd>
+  </dl>
+</article>
+
+<section class="block" id="more" style="padding-top:56px">
+  <div class="section-head"><h2>More projects</h2></div>
+  <div class="mini-grid">
+    <article class="mini" id="politrend">
+      <a class="mini-img" href="img/projects/politrend-topics.png"><img src="img/projects/politrend-topics.png" width="751" height="456" loading="lazy" alt="Topic map of election tweets with labeled clusters."></a>
+      <div class="mini-body">
+        <div class="tags"><span class="label team">Team lead · Hackathon winner</span><span>2024</span></div>
+        <h3>Election trends from 2,742 tweets</h3>
+        <p>BERTopic and a locally run Mistral-7B labeled 36 election subtopics and exposed a crypto-spam cluster riding the hashtags.</p>
+        <a class="btn gh sm" href="https://github.com/kritikagarg/titansPoliTrend"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>Code</a>
+      </div>
+    </article>
+    <article class="mini" id="trec-covid">
+      <div class="mini-img diagram-thumb"><svg viewBox="0 0 820 104" role="img" aria-label="COVID-19 search pipeline: 128K CORD-19 papers, query expansion with question and narrative, BM25 in Elasticsearch, re-ranking with five BERT models, evaluation with trec_eval."><defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="ah"/></marker></defs><rect class="box" x="1.0" y="8" width="141.2" height="88" rx="10"/><text class="bt" x="71.6" y="42" text-anchor="middle">Index</text><text class="bs" x="71.6" y="62" text-anchor="middle">128K CORD-19</text><text class="bs" x="71.6" y="77" text-anchor="middle">papers</text><line class="arrow" x1="145.2" y1="52.0" x2="165.2" y2="52.0" marker-end="url(#ah)"/><rect class="box" x="170.2" y="8" width="141.2" height="88" rx="10"/><text class="bt" x="240.8" y="42" text-anchor="middle">Expand query</text><text class="bs" x="240.8" y="62" text-anchor="middle">+ question</text><text class="bs" x="240.8" y="77" text-anchor="middle">+ narrative</text><line class="arrow" x1="314.4" y1="52.0" x2="334.4" y2="52.0" marker-end="url(#ah)"/><rect class="box" x="339.4" y="8" width="141.2" height="88" rx="10"/><text class="bt" x="410.0" y="42" text-anchor="middle">Retrieve</text><text class="bs" x="410.0" y="62" text-anchor="middle">BM25 in</text><text class="bs" x="410.0" y="77" text-anchor="middle">Elasticsearch</text><line class="arrow" x1="483.6" y1="52.0" x2="503.6" y2="52.0" marker-end="url(#ah)"/><rect class="box" x="508.6" y="8" width="141.2" height="88" rx="10"/><text class="bt" x="579.2" y="42" text-anchor="middle">Re-rank</text><text class="bs" x="579.2" y="62" text-anchor="middle">5 BERT-based</text><text class="bs" x="579.2" y="77" text-anchor="middle">models</text><line class="arrow" x1="652.8" y1="52.0" x2="672.8" y2="52.0" marker-end="url(#ah)"/><rect class="box last" x="677.8" y="8" width="141.2" height="88" rx="10"/><text class="bt" x="748.4" y="42" text-anchor="middle">Evaluate</text><text class="bs" x="748.4" y="62" text-anchor="middle">trec_eval:</text><text class="bs" x="748.4" y="77" text-anchor="middle">MAP, NDCG</text></svg></div>
+      <div class="mini-body">
+        <div class="tags"><span class="label team">Team project</span><span>2020</span></div>
+        <h3>Searching 128K COVID-19 papers</h3>
+        <p>Query expansion raised mean average precision by 62%; five BERT re-rankers did not beat tuned BM25 at the top 10.</p>
+        <a class="btn gh sm" href="https://github.com/kritikagarg/InformationRetrievalSystem"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>Code</a>
+      </div>
+    </article>
+    <article class="mini" id="customization">
+      <a class="mini-img" href="img/eks/rag-gradio-ui.png"><img src="img/eks/rag-gradio-ui.png" loading="lazy" alt="Gradio app comparing standard and RAG answers."></a>
+      <div class="mini-body">
+        <div class="tags"><span>2026 · PEFT, vLLM, S3 Vectors</span></div>
+        <h3>LoRA fine-tuning and RAG on Kubernetes</h3>
+        <p>Fine-tuned an 8B model on 200 examples in under three minutes (token accuracy 0.89 → 0.99), plus a RAG app comparing grounded and ungrounded answers.</p>
+      </div>
+    </article>
+    <article class="mini" id="agentic">
+      <a class="mini-img" href="img/projects/anomaly-architecture.png"><img src="img/projects/anomaly-architecture.png" width="1308" height="580" loading="lazy" alt="Architecture of the streaming anomaly-detection pipeline."></a>
+      <div class="mini-body">
+        <div class="tags"><span>2026 · Kafka, Flink, Bedrock AgentCore, MCP</span></div>
+        <h3>Agentic AI systems</h3>
+        <p>Streaming anomaly detection with Kafka and Flink feeding an agent that writes alerts through MCP tools, plus a multi-agent system using A2A.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+</div>
+
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Kritika Garg · Last updated November 2026</span>
+    <nav aria-label="Profiles"><a href="mailto:kgarg001@odu.edu">Email</a><a href="https://github.com/kritikagarg">GitHub</a><a href="https://linkedin.com/in/kritika-k-garg/">LinkedIn</a><a href="https://scholar.google.com/citations?view_op=list_works&amp;hl=en&amp;user=apXQRYsAAAAJ">Google Scholar</a><a href="https://orcid.org/0000-0001-6498-7391">ORCID</a></nav>
+  </div>
+</footer>
+<script>
+(function () {
+  var root = document.documentElement, btn = document.getElementById('theme-toggle');
+  function isDark() {
+    var t = root.getAttribute('data-theme');
+    return t ? t === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  function sync() { root.setAttribute('data-theme', isDark() ? 'dark' : 'light'); btn.setAttribute('aria-label', isDark() ? 'Switch to light mode' : 'Switch to dark mode'); }
+  sync();
+  btn.addEventListener('click', function () {
+    var next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    sync();
+  });
+})();
+</script>
+
+</body>
+</html>

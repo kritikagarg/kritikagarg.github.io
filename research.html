@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research · Kritika Garg</title>
+<meta name="description" content="Research on web page lifespans, link rot, archival replay and social network topic lifecycles.">
+<meta name="author" content="Kritika Garg">
+<script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav" aria-label="Site">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Kritika Garg, home"><span>K</span>G</a>
+    <div class="nav-right">
+      <ul><li><a href="index.html">About</a></li><li><a href="experience.html">Experience</a></li><li><a href="research.html" aria-current="page">Research</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li><li><a href="teaching.html">Teaching</a></li></ul>
+    </div>
+    <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+  </div>
+</nav>
+<main id="top">
+
+<header class="page-head"><div class="wrap">
+  <p class="eyebrow">// research</p>
+  <h1>Research</h1>
+  
+</div></header>
+<section class="block" id="research" style="padding-top:8px">
+    <div class="wrap">
+      <div class="themes">
+        <article class="theme">
+          <div class="years">2023 – present</div>
+          <div>
+            <h3>Web Page Lifespans Through Longitudinal Sampling of the Wayback Machine</h3>
+            <p>A sample of 27.3 million URLs from the Wayback Machine, traced across 3.8 billion snapshots and 25 years. To measure lifespans accurately, this work introduces the Multi-Resident URL framework, which separates a URL from the successive pages that occupy it over time.</p>
+            <figure class="fig">
+              <div class="frame"><img src="img/lifespan-survival.png" width="1200" height="885" loading="lazy" alt="Survival curves for 7.4 million dead URLs. Deep links have about a 50% chance of surviving beyond 1 year and 4.7% beyond 9 years; root URLs have about a 50% chance of surviving beyond 9 years."></div>
+              <figcaption>Deep links fade fast: half are gone within a year, while half of root URLs last nine years. From the JCDL 2026 paper.</figcaption>
+            </figure>
+            <p class="papers">JCDL 2026 Doctoral Consortium · JCDL 2025 (two papers) · arXiv 2025 · <a href="https://www.slideshare.net/slideshow/lessons-learned-from-the-longitudinal-sampling-of-a-large-web-archive/257678361">Talk slides</a></p>
+          </div>
+        </article>
+        <article class="theme">
+          <div class="years">2024 – 2025</div>
+          <div>
+            <h3>Redirection Patterns and Link Failure on the Web</h3>
+            <p>An analysis of 11 million redirection chains across 2.6 million domains shows that half fail end to end. It maps where broken links accumulate and identifies 62,000 soft 404s: error pages that falsely report success.</p>
+            <figure class="fig">
+              <div class="frame"><img src="img/redirect-sankey.png" width="1400" height="747" loading="lazy" alt="Sankey diagram of 10,975,138 redirecting URLs. 3,148,740 take a second redirect, 672,306 a third and 154,228 four or more. In the end 5,474,236 reach a successful page, 5,494,834 end in an error, and 6,068 are still redirecting after ten hops."></div>
+              <figcaption>The journey of 11 million redirects, hop by hop. About half reach a working page (green) and half end in an error (red). From the WebSci 2025 paper.</figcaption>
+            </figure>
+            <p class="papers">ACM Web Science 2025 · <a href="https://www.slideshare.net/slideshow/not-here-go-there-analyzing-redirection-patterns-on-the-web/279518493">Slides</a></p>
+          </div>
+        </article>
+        <article class="theme">
+          <div class="years">2022</div>
+          <div>
+            <h3>Reducing Unnecessary Traffic in Archival Replay</h3>
+            <p>During replay, JavaScript on archived pages can repeatedly request resources that were never archived; one page sent over 1,000 requests a minute. Caching the resulting 404 responses with a Cache-Control header stopped these requests from reaching the archive server.</p>
+            <div class="fig-wrap fig-pair">
+              <figure class="fig">
+                <div class="frame"><img src="img/cache-404-diagram.png" width="1070" height="475" loading="lazy" alt="Diagram: the browser's first request for a missing image gets a 404 from the web archive server with Cache-Control public, max-age 600. Recurring requests in the next 600 seconds are answered from the browser cache instead of the server."></div>
+                <figcaption>The fix: the archive answers once, and the browser cache handles every repeat for 10 minutes.</figcaption>
+              </figure>
+              <figure class="fig">
+                <div class="frame"><img src="img/cache-404-requests.png" width="1033" height="610" loading="lazy" alt="Line chart of cumulative requests over 60 seconds. Without caching, requests climb steadily to about 1,150. With cached 404 responses, they level off at about 200 after the first 13 seconds."></div>
+                <figcaption>Requests from one archived page over a minute, before (red) and after (blue) caching 404s.</figcaption>
+              </figure>
+            </div>
+            <p class="papers">ICADL 2022 · JCDL WADL 2022 workshop · <a href="papers/caching-404-icadl-2022.pdf">Read the paper</a></p>
+          </div>
+        </article>
+        <article class="theme">
+          <div class="years">2022 – 2024</div>
+          <div>
+            <h3>Robot and Human Access Patterns in Web Archives</h3>
+            <p>Server logs from the Internet Archive and Arquivo.pt show that robots still outnumber human visitors, though by a shrinking margin.</p>
+            <figure class="fig">
+              <div class="frame"><img src="img/robots-pipeline.png" width="1400" height="570" loading="lazy" alt="Pipeline diagram: raw access logs from the Internet Archive and Arquivo.pt go through two cleaning stages, session identification and bot identification heuristics, producing separate bot and human datasets for analysis of access patterns and temporal preference."></div>
+              <figcaption>Separating robots from humans in archive access logs. From the IJDL 2024 article.</figcaption>
+            </figure>
+            <p class="papers">TPDL 2022 (Best Student Paper) · IJDL 2024</p>
+          </div>
+        </article>
+        <article class="theme">
+          <div class="years">2021 – 2023</div>
+          <div>
+            <h3>Replay Fidelity of Archived Twitter Pages</h3>
+            <p>When Twitter moved to a new interface in June 2020, most web archives could no longer capture it and fell back to the old one. A case study of a suspended, heavily labeled account found no archival evidence that some of its tweets ever carried Twitter’s misinformation labels, and showed that replayed pages can mix content from different moments in time.</p>
+            <p class="papers">JCDL 2021 · IJDL 2023 · <a href="https://www.slideshare.net/slideshow/replaying-archived-twitter-when-your-bird-is-broken-will-it-bring-you-down/251931276">Slides (JCDL)</a> · <a href="https://www.slideshare.net/slideshow/challenges-in-replaying-archived-twitter-pages-257443415/257443415">Slides (IJDL)</a></p>
+          </div>
+        </article>
+        <article class="theme">
+          <div class="years">2017 – 2019 · IBM</div>
+          <div>
+            <h3>Topic Lifecycles and Homophily in Social Networks</h3>
+            <p>Work at IBM modeled how topics evolve within Twitter communities using embeddings, clustering and PageRank, and produced a hashtag recommender with a 7.67% lift over the baseline.</p>
+            <figure class="fig">
+              <div class="frame"><img src="img/topic-lifecycle.png" width="1400" height="398" loading="lazy" alt="Three line charts of topic intensity over 20 days. The overall lifecycle peaks around days 11 and 16; community 1 peaks on days 6 and 11; community 2 peaks on days 6, 11 and 16."></div>
+              <figcaption>A topic's overall lifecycle (left) is the sum of separate lifecycles inside each community. From the ECIR 2018 talk.</figcaption>
+            </figure>
+            <p class="papers">ECIR 2018 · Complex Networks 2017 &amp; 2018 · Computational Social Networks 2018 · <a href="https://www.slideshare.net/slideshow/ecir-2018-topic-lifecyclespptx/229556185#32">ECIR talk slides</a></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Kritika Garg · Last updated November 2026</span>
+    <nav aria-label="Profiles"><a href="mailto:kgarg001@odu.edu">Email</a><a href="https://github.com/kritikagarg">GitHub</a><a href="https://linkedin.com/in/kritika-k-garg/">LinkedIn</a><a href="https://scholar.google.com/citations?view_op=list_works&amp;hl=en&amp;user=apXQRYsAAAAJ">Google Scholar</a><a href="https://orcid.org/0000-0001-6498-7391">ORCID</a></nav>
+  </div>
+</footer>
+<script>
+(function () {
+  var root = document.documentElement, btn = document.getElementById('theme-toggle');
+  function isDark() {
+    var t = root.getAttribute('data-theme');
+    return t ? t === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  function sync() { root.setAttribute('data-theme', isDark() ? 'dark' : 'light'); btn.setAttribute('aria-label', isDark() ? 'Switch to light mode' : 'Switch to dark mode'); }
+  sync();
+  btn.addEventListener('click', function () {
+    var next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    sync();
+  });
+})();
+</script>
+
+</body>
+</html>
